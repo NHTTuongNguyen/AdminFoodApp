@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:layout_margin="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="6dp"
+    android:layout_height="200dp">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/img_menu"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"/>
+        <ImageView
+            android:src="@drawable/news"
+            android:layout_marginTop="10dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="Khuyến mãi"/>
+        <TextView
+            android:id="@+id/txt_menu"
+            android:text="Name of Menu"
+            android:textColor="@android:color/white"
+            android:background="#4f0e0d0e"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
