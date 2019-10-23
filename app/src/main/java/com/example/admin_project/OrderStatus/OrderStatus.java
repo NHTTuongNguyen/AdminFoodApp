@@ -65,6 +65,7 @@ public class OrderStatus extends AppCompatActivity {
                 viewHolder.txtOrderName.setText(model.getName());
                 viewHolder.txtOrderEmail.setText(model.getEmail());
                 viewHolder.txtOrderNameFood.setText(model.getTotal());
+                viewHolder.txtOrderDate.setText(Common.getDate(Long.parseLong(adapter.getRef(position).getKey())));
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {

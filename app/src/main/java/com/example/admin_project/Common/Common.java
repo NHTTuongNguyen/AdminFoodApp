@@ -9,6 +9,9 @@ import com.example.admin_project.Model.Category;
 import com.example.admin_project.Model.Request;
 import com.example.admin_project.Model.User;
 
+import java.util.Calendar;
+import java.util.Locale;
+
 public class Common {
     public static User currentUser;
     public static Category currentCategory;
@@ -48,5 +51,15 @@ public class Common {
             return "Shipped";
     }
 
+    public static String getDate(long time)
+    {
+        Calendar calendar  = Calendar.getInstance(Locale.ENGLISH);
+        calendar.setTimeInMillis(time);
+        StringBuilder date  = new StringBuilder(
+                android.text.format.DateFormat.format("MM/dd/yyyy HH:mm"
+                        ,calendar)
+                        .toString());
+        return date.toString();
+    }
 
 }
