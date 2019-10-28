@@ -159,7 +159,8 @@ public class FoodList extends AppCompatActivity {
     }
 
     private void showDiaLogListFood() {
-        AlertDialog.Builder alertDialog = new AlertDialog.Builder(FoodList.this);
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(FoodList.this)
+                ;
 //        alertDialog.setTitle("Add new Food");
 //        alertDialog.setMessage("Please fill fun imformation");
         LayoutInflater inflater = this.getLayoutInflater();
