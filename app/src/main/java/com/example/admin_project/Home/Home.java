@@ -181,7 +181,7 @@ public class Home extends AppCompatActivity
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         Intent i = new Intent(Home.this, FoodList.class);
-                        Toast.makeText(Home.this, ""+clickItem.getName(), Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(Home.this, ""+clickItem.getName(), Toast.LENGTH_SHORT).show();
                         i.putExtra("CategoryId",adapter.getRef(position).getKey());
                         startActivity(i);
 
