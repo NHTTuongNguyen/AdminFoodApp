@@ -15,7 +15,7 @@ public class OrderDetail extends AppCompatActivity {
 
 
 
-    TextView order_id,order_phone,order_address,order_total,order_comment;
+    TextView order_id,order_phone,order_address,order_total;
     String order_id_value = "";
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;

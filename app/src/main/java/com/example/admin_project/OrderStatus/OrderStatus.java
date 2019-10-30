@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.admin_project.Common.Common;
 import com.example.admin_project.Interface.ItemClickListener;
@@ -64,24 +65,14 @@ public class OrderStatus extends AppCompatActivity {
                 viewHolder.txtOrderPhone.setText(model.getPhone());
                 viewHolder.txtOrderName.setText(model.getName());
                 viewHolder.txtOrderEmail.setText(model.getEmail());
-                viewHolder.txtOrderNameFood.setText(model.getTotal());
+                viewHolder.txtOrderTotalFood.setText(model.getTotal());
                 viewHolder.txtOrderDate.setText(Common.getDate(Long.parseLong(adapter.getRef(position).getKey())));
                 viewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        // just  implement it to fix Crash when click to this item
-
-                viewHolder.setItemClickListener(new ItemClickListener() {
-                    @Override
-                    public void onClick(View view, int position, boolean isLongClick) {
-//                        Intent intent = new Intent(OrderStatus.this,OrderDetail.class);
-//
-//                        intent.putExtra("OrderId",adapter.getRef(position).getKey());
-//                        startActivity(intent);
-                    }
-                });
-
-
+                        Intent intent = new Intent(OrderStatus.this,OrderDetail.class);
+                        intent.putExtra("OrderId",adapter.getRef(position).getKey());
+                        startActivity(intent);
                     }
                 });
             }

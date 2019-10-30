@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     app:cardElevation="2dp"
     app:cardCornerRadius="6dp"
-    android:layout_height="200dp">
+    android:layout_height="170dp">
 
     <RelativeLayout
 
@@ -27,9 +27,10 @@
             android:id="@+id/txt_menu"
             android:text="Name of Menu"
             android:textColor="@android:color/white"
-            android:background="#4f0e0d0e"
+            android:background="#80000000"
             android:textSize="20sp"
-            android:gravity="center"
+           android:gravity="center"
+            android:textStyle="bold"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>

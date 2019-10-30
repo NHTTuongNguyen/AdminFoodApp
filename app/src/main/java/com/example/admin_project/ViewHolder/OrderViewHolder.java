@@ -13,6 +13,7 @@ import com.example.admin_project.R;
 
 public class OrderViewHolder extends RecyclerView.ViewHolder implements
         View.OnClickListener,
+        View.OnLongClickListener,
         View.OnCreateContextMenuListener {
 
     public TextView txtOrderId,txtOrderStatus,
@@ -20,13 +21,14 @@ public class OrderViewHolder extends RecyclerView.ViewHolder implements
             txtOrderName,
             txtOrderNameFood,
             txtOrderDate,
+            txtOrderTotalFood,
             txtOrderEmail;
     private ItemClickListener itemClickListener;
 
 
     public OrderViewHolder(@NonNull View itemView) {
         super(itemView);
-        txtOrderNameFood = itemView.findViewById(R.id.order_name_food);
+        txtOrderTotalFood = itemView.findViewById(R.id.order_total_food);
         txtOrderId= itemView.findViewById(R.id.order_id);
         txtOrderStatus = itemView.findViewById(R.id.order_status);
         txtOrderPhone = itemView.findViewById(R.id.order_phone);
@@ -36,7 +38,10 @@ public class OrderViewHolder extends RecyclerView.ViewHolder implements
         txtOrderDate = itemView.findViewById(R.id.order_time_food);
 
         itemView.setOnCreateContextMenuListener(this);
+        itemView.setOnLongClickListener(this);
         itemView.setOnClickListener(this);
+
+
 
     }
     public void setItemClickListener(ItemClickListener itemClickListener) {
@@ -56,5 +61,9 @@ public class OrderViewHolder extends RecyclerView.ViewHolder implements
     }
 
 
-
+    @Override
+    public boolean onLongClick(View v) {
+        itemClickListener.onClick(v,getAdapterPosition(),true);
+        return true;
+    }
 }

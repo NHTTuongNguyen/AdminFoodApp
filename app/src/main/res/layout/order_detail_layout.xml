@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="250dp"
+    android:id="@+id/order_info"
+    android:layout_height="150dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="12dp"
     app:cardElevation="4dp"
@@ -18,13 +19,13 @@
             android:layout_width="5.2dp"
             android:layout_height="match_parent"
             android:layout_gravity="bottom"
-            android:background="#0B8B10" />
+            android:background="@color/colorBlue" />
 
         <View
             android:layout_width="5.2dp"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:background="#0B8B10" />
+            android:background="@color/colorBlue" />
 
 
 
@@ -42,7 +43,7 @@
             android:layout_marginLeft="15dp"
             android:layout_height="22dp"
             android:layout_alignParentTop="true"
-            android:background="@color/fui_bgGitHub" />
+            android:background="#10336c" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -62,13 +63,13 @@
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/font_a"
                     android:gravity="center_vertical|start"
-                    android:text="Code Bill:"
+                    android:text="Product Name:"
                     android:textAllCaps="true"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/order_id"
+                    android:id="@+id/product_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -76,121 +77,15 @@
                     android:fontFamily="@font/font_a"
                     android:textColor="#37428b"
                     android:gravity="center_vertical|start"
-                    android:text="#9999999"
+                    android:text="ProductName"
                     android:textAllCaps="true"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/font_a"
-                    android:gravity="center_vertical|start"
-                    android:text="Total:"
-                    android:textAllCaps="true"
-                    android:textSize="16sp"
-                    android:textStyle="italic"
-
-                    />
-
-                <TextView
-                    android:id="@+id/order_total_food"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical|start"
-                    android:text="Total"
-                    android:fontFamily="@font/font_a"
-                    android:textAllCaps="true"
-                    android:textColor="#262b39"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-
-                    />
 
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/font_a"
-                    android:gravity="center_vertical|start"
-                    android:text="Date:"
-                    android:textAllCaps="true"
-                    android:textSize="16sp"
-                    android:textStyle="italic"
-
-                    />
-
-                <TextView
-                    android:id="@+id/order_time_food"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical|start"
-                    android:text="Date"
-                    android:fontFamily="@font/font_a"
-                    android:textAllCaps="true"
-                    android:textColor="#262b39"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-
-                    />
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/font_a"
-                    android:gravity="center_vertical|start"
-                    android:text="Status:"
-                    android:textAllCaps="true"
-                    android:textSize="16sp"
-                    android:textStyle="italic"
-
-                    />
-
-                <TextView
-                    android:id="@+id/order_status"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical|start"
-                    android:text="Status"
-                    android:fontFamily="@font/font_a"
-                    android:textAllCaps="true"
-                    android:textSize="16sp"
-                    android:textColor="#262b39"
-                    android:textStyle="bold"
-
-                    />
-
-            </LinearLayout>
 
 
             <LinearLayout
@@ -205,7 +100,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/font_a"
                     android:gravity="center_vertical|start"
-                    android:text="Name:"
+                    android:text="Quantity:"
                     android:textAllCaps="true"
                     android:textSize="16sp"
                     android:textStyle="italic"
@@ -213,12 +108,12 @@
                     />
 
                 <TextView
-                    android:id="@+id/order_name"
+                    android:id="@+id/product_quantity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical|start"
-                    android:text="Name"
+                    android:text="quantity"
                     android:fontFamily="@font/font_a"
                     android:textAllCaps="true"
                     android:textColor="#262b39"
@@ -232,42 +127,7 @@
 
 
 
-            <LinearLayout
-                android:layout_marginBottom="5dp"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:fontFamily="@font/font_a"
-                    android:gravity="center_vertical|start"
-                    android:text="Phone:"
-                    android:textAllCaps="true"
-                    android:textSize="16sp"
-                    android:textStyle="italic"
-
-                    />
-
-                <TextView
-                    android:id="@+id/order_phone"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:gravity="center_vertical|start"
-                    android:text="123456789"
-                    android:textAllCaps="true"
-                    android:textColor="#262b39"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/font_a"
-
-                    />
-
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_marginBottom="5dp"
@@ -281,7 +141,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/font_a"
                     android:gravity="center_vertical|start"
-                    android:text="Email:"
+                    android:text="Price:"
                     android:textAllCaps="true"
                     android:textSize="16sp"
                     android:textStyle="italic"
@@ -289,12 +149,12 @@
                     />
 
                 <TextView
-                    android:id="@+id/order_email"
+                    android:id="@+id/product_price"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical|start"
-                    android:text="admin@gmail.com"
+                    android:text="Price"
                     android:textColor="#262b39"
                     android:textStyle="bold"
                     android:textSize="16sp"
@@ -318,7 +178,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/font_a"
                     android:gravity="center_vertical|start"
-                    android:text="Address:"
+                    android:text="Discount:"
                     android:textAllCaps="true"
                     android:textSize="16sp"
                     android:textStyle="italic"
@@ -326,12 +186,12 @@
                     />
 
                 <TextView
-                    android:id="@+id/order_address"
+                    android:id="@+id/product_discount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:gravity="center_vertical|start"
-                    android:text="Address"
+                    android:text="Discount"
                     android:maxLines="3"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/font_a"
