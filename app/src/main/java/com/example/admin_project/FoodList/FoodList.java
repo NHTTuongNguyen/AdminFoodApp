@@ -25,6 +25,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.admin_project.Common.Common;
+import com.example.admin_project.FoodDetail.FoodDetail;
 import com.example.admin_project.Home.Home;
 import com.example.admin_project.Interface.ItemClickListener;
 import com.example.admin_project.Model.Category;
@@ -460,7 +461,9 @@ public class FoodList extends AppCompatActivity {
                 foodViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(FoodList.this, clickFood.getName(), Toast.LENGTH_SHORT).show();
+                       Intent intent = new Intent(FoodList.this, FoodDetail.class);
+                        intent.putExtra("FoodId",adapter.getRef(position).getKey());
+                       startActivity(intent);
                     }
                 });
 
