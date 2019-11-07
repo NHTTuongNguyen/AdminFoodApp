@@ -12,11 +12,23 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <ImageView
+
+
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/img_menu"
+            app:riv_corner_radius="5dp"
             android:scaleType="centerCrop"
             android:layout_height="match_parent"
             android:layout_width="match_parent"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/image_thum_textview_bg" />
+
         <ImageView
             android:src="@drawable/news"
             android:layout_marginTop="10dp"
@@ -27,7 +39,7 @@
             android:id="@+id/txt_menu"
             android:text="Name of Menu"
             android:textColor="@android:color/white"
-            android:background="#80000000"
+
             android:textSize="20sp"
            android:gravity="center"
             android:textStyle="bold"

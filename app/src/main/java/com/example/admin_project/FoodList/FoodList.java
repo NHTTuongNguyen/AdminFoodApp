@@ -325,14 +325,7 @@ public class FoodList extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
-                String edtNameEmpty = edtName.getText().toString().trim();
-                String edtDescriptionEmpty = edtDescription.getText().toString().trim();
-                String edtPriceEmpty = edtPrice.getText().toString().trim();
-                String  edtDiscountEmpty = edtDiscount.getText().toString().trim();
-                if (TextUtils.isEmpty(edtNameEmpty)) {
-                    Toast.makeText(getApplicationContext(), "Please Enter Your Category!", Toast.LENGTH_SHORT).show();
-                    return;
-                }
+
 
 
                 ///here just create new category
@@ -485,7 +478,7 @@ public class FoodList extends AppCompatActivity {
                 && data != null && data.getData() != null)
         {
             saveUri = data.getData();
-            btnSelect.setText("Image Selected!");
+            btnSelect.setText("Selected!");
         }
 
     }
