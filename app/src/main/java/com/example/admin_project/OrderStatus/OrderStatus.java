@@ -67,14 +67,14 @@ public class OrderStatus extends AppCompatActivity {
                 viewHolder.txtOrderEmail.setText(model.getEmail());
                 viewHolder.txtOrderTotalFood.setText(model.getTotal());
                 viewHolder.txtOrderDate.setText(Common.getDate(Long.parseLong(adapter.getRef(position).getKey())));
-                viewHolder.setItemClickListener(new ItemClickListener() {
-                    @Override
-                    public void onClick(View view, int position, boolean isLongClick) {
-                        Intent intent = new Intent(OrderStatus.this,OrderDetail.class);
-                        intent.putExtra("OrderId",adapter.getRef(position).getKey());
-                        startActivity(intent);
-                    }
-                });
+//                viewHolder.setItemClickListener(new ItemClickListener() {
+//                    @Override
+//                    public void onClick(View view, int position, boolean isLongClick) {
+//                        Intent intent = new Intent(OrderStatus.this,OrderDetail.class);
+//                        intent.putExtra("OrderId",adapter.getRef(position).getKey());
+//                        startActivity(intent);
+//                    }
+//                });
             }
         };
         adapter.notifyDataSetChanged();
@@ -103,7 +103,7 @@ public class OrderStatus extends AppCompatActivity {
 
         final LayoutInflater inflater = this.getLayoutInflater();
         final View view = inflater.inflate(R.layout.update_order_layout,null);
-        materialSpinner = (MaterialSpinner) findViewById(R.id.statusspiner);
+        materialSpinner = view.findViewById(R.id.statusspiner);
         materialSpinner.setItems("Placed","On my way","Shipped");
         alertDialog.setView(view);
 
