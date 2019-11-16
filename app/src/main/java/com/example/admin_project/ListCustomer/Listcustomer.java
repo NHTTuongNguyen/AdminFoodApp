@@ -56,7 +56,7 @@ public class Listcustomer extends AppCompatActivity {
                 userViewHolder.setItemClickListener(new ItemClickListener() {
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        User userName = user;
+                        User userName = new User();
                         Toast.makeText(Listcustomer.this, ""+userName.getName(), Toast.LENGTH_SHORT).show();
                     }
                 });

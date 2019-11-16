@@ -67,14 +67,17 @@ public class OrderStatus extends AppCompatActivity {
                 viewHolder.txtOrderEmail.setText(model.getEmail());
                 viewHolder.txtOrderTotalFood.setText(model.getTotal());
                 viewHolder.txtOrderDate.setText(Common.getDate(Long.parseLong(adapter.getRef(position).getKey())));
-//                viewHolder.setItemClickListener(new ItemClickListener() {
-//                    @Override
-//                    public void onClick(View view, int position, boolean isLongClick) {
-//                        Intent intent = new Intent(OrderStatus.this,OrderDetail.class);
-//                        intent.putExtra("OrderId",adapter.getRef(position).getKey());
-//                        startActivity(intent);
-//                    }
-//                });
+                viewHolder.setItemClickListener(new ItemClickListener() {
+                    @Override
+                    public void onClick(View view, int position, boolean isLongClick) {
+                        Intent intent = new Intent(OrderStatus.this,OrderDetail.class);
+                        Common.currentRequest = model;
+                        intent.putExtra("OrderId",adapter.getRef(position).getKey());
+                        startActivity(intent);
+                    //
+
+                    }
+                });
             }
         };
         adapter.notifyDataSetChanged();

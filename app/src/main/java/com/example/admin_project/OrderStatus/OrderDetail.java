@@ -12,24 +12,23 @@ import com.example.admin_project.R;
 import com.example.admin_project.ViewHolder.OrderDetailAdapter;
 
 public class OrderDetail extends AppCompatActivity {
-
-
-
     TextView order_id,order_phone,order_address,order_total;
     String order_id_value = "";
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_detail);
 
-        order_id = findViewById(R.id.order_id_detail);
-        order_phone = findViewById(R.id.order_phone_detail);
-        order_address = findViewById(R.id.order_address_detail);
-        order_total = findViewById(R.id.order_total_detail);
+        order_id = findViewById(R.id.order_id);
+        order_phone = findViewById(R.id.order_phone);
+        order_address = findViewById(R.id.order_address);
+        order_total = findViewById(R.id.order_total);
 
-        recyclerView = findViewById(R.id.listFood);
+        recyclerView = findViewById(R.id.lstFoods);
         recyclerView.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);

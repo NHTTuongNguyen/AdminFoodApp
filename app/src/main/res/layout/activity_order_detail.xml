@@ -11,7 +11,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:id="@+id/order_info"
-        android:layout_height="215dp"
+        android:layout_height="150dp"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_margin="12dp"
         app:cardElevation="4dp"
@@ -28,13 +28,13 @@
                 android:layout_width="5.2dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom"
-                android:background="@color/colorBlue" />
+                android:background="#0B8B10" />
 
             <View
                 android:layout_width="5.2dp"
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
-                android:background="@color/colorBlue" />
+                android:background="#0B8B10" />
 
 
 
@@ -78,7 +78,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/order_id_detail"
+                        android:id="@+id/order_id"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -117,7 +117,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/order_phone_detail"
+                        android:id="@+id/order_phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -158,12 +158,12 @@
                         />
 
                     <TextView
-                        android:id="@+id/order_total_detail"
+                        android:id="@+id/order_total"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:gravity="center_vertical|start"
-                        android:text="admin@gmail.com"
+                        android:text="Total"
                         android:textColor="#262b39"
                         android:textStyle="bold"
                         android:textSize="16sp"
@@ -195,7 +195,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/order_address_detail"
+                        android:id="@+id/order_address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
@@ -226,17 +226,51 @@
         android:layout_below="@+id/order_info"
         android:layout_height="wrap_content">
 
-        <TextView
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Food Detail"
-            android:textSize="30dp"
-            android:layout_margin="10dp"
-            />
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp">
+
+            <View
+                android:id="@+id/view_latest"
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="#FF1718" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/button_latest_home_fragment"
+                android:layout_toEndOf="@+id/view_latest"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Các sản phẩm khuyến mãi"
+                android:textColor="#313131"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_latest_home_fragment"
+                android:layout_width="80dp"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_login_bg"
+                android:text="see all"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/listFood"/>
+            android:id="@+id/lstFoods"/>
     </LinearLayout>
 
 </RelativeLayout>

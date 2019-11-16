@@ -324,7 +324,7 @@ public class Home extends AppCompatActivity
                 && data != null && data.getData() != null)
         {
             saveUri = data.getData();
-            btnSelect.setText("Image Selected!");
+            btnSelect.setText("Selected!");
         }
 
     }
