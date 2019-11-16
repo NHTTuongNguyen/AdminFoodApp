@@ -1,6 +1,7 @@
 package com.example.admin_project.ViewHolder;
 
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.admin_project.Model.Order;
 import com.example.admin_project.R;
+import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class OrderDetailAdapter extends RecyclerView.Adapter<OrderDetailViewHolder> {
 
-    List<Order> myOrders;
+    List<Order> myOrders = new ArrayList<>();
+    private Context context;
+
 
     public OrderDetailAdapter(List<Order> myOrders) {
         this.myOrders = myOrders;
@@ -34,15 +39,21 @@ public class OrderDetailAdapter extends RecyclerView.Adapter<OrderDetailViewHold
     public void onBindViewHolder(@NonNull OrderDetailViewHolder holder, int position) {
 
         Order order  = myOrders.get(position);
-//        holder.name.setText(String.format("Name : %s",order.getProductName()));
-//        holder.price.setText(String.format("Price : %s",order.getPrice()));
-//        holder.discount.setText(String.format("Discount : %s",order.getDiscount()));
-//        holder.quantity.setText(String.format("Quantity : %s",order.getQuantity()));
 
-        holder.name.setText(String.format(order.getProductName()));
-        holder.price.setText(String.format(order.getPrice()));
-        holder.discount.setText(String.format(order.getDiscount()));
-        holder.quantity.setText(String.format(order.getQuantity()));
+        Picasso.with(context)
+                .load(myOrders.get(position).getImage())
+                .placeholder(R.drawable.imgerror)
+                .error(R.drawable.error)
+                .into(holder.img);
+        holder.name.setText(String.format("Name : %s",order.getProductName()));
+        holder.price.setText(String.format("Price : %s",order.getPrice()));
+        holder.discount.setText(String.format("Discount : %s",order.getDiscount()));
+        holder.quantity.setText(String.format("Quantity : %s",order.getQuantity()));
+
+//        holder.name.setText(String.format(order.getProductName()));
+//        holder.price.setText(String.format(order.getPrice()));
+//        holder.discount.setText(String.format(order.getDiscount()));
+//        holder.quantity.setText(String.format(order.getQuantity()));
 
 
     }
