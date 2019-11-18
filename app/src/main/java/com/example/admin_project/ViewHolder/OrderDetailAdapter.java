@@ -24,9 +24,13 @@ public class OrderDetailAdapter extends RecyclerView.Adapter<OrderDetailViewHold
     private Context context;
 
 
+
+
     public OrderDetailAdapter(List<Order> myOrders) {
         this.myOrders = myOrders;
     }
+
+
 
     @Override
     public OrderDetailViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

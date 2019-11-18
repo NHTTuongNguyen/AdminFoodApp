@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
                     android:paddingTop="5dp"
-                    android:text="hhuhuhuh"
+                    android:text="Name Food"
                     android:textColor="#1C223C"
                     android:textSize="15dp" />
 
