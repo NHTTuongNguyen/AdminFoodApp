@@ -43,7 +43,7 @@
                 android:background="@drawable/buttonsingup"
                 android:layout_width="match_parent"
                 android:id="@+id/upload"
-                android:text="Upload"
+                android:text="Submit"
                 android:textSize="15dp"
                 android:textColor="#ffff"
                 android:layout_height="wrap_content" />
